@@ -1,0 +1,16 @@
+match .todo ns-view-add-class {
+    ' b-todo'
+}
+
+match .todo ns-view-content {
+    <label class="b-todo__title">
+        <input type="checkbox" class="b-todo__check js-check">
+            if /.models.todo.done == 'true' {
+                @checked = 'checked'
+            }
+        </input>
+        <span class="b-todo__text">
+            /.models.todo.title
+        </span>
+    </label>
+} 

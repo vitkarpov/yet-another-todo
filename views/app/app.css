@@ -1,0 +1,11 @@
+.b-app
+{
+    width: 1000px;
+    margin: 24px auto;
+}
+
+.b-app__content
+{
+    padding: 12px;
+    border: 1px dashed lightgray;
+}

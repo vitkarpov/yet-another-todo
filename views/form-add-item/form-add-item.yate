@@ -1,0 +1,12 @@
+match .formAddItem ns-view-content {
+    <form class="js-form">
+        <fieldset class="b-form-add-item">
+            <button type="submit" class="b-form-add-item__button">
+                'Add'
+            </button>
+            <div class="b-form-add-item__text-wrapper">
+                <input type="text" name="title" class="b-form-add-item__text js-input-title" placeholder="What needs to be done?" />
+            </div>
+        </fieldset>
+    </form>
+}

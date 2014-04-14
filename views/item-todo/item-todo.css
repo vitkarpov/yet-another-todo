@@ -1,0 +1,22 @@
+.b-todo
+{
+    margin: 6px 0;
+}
+
+.b-todo__title
+{
+    position: relative;
+    padding-left: 21px
+}
+
+.b-todo__check
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.b-todo__check:checked + .b-todo__text
+{
+    text-decoration: line-through;
+}

@@ -1,0 +1,30 @@
+{
+    "author": {
+        "name": "Alexey Androsov",
+        "email": "doochik@ya.ru",
+        "url": "https://github.com/doochik"
+    },
+    "name": "noscript-stub",
+    "description": "Stub project for Noscript",
+    "version": "0.0.1",
+    "homepage": "https://github.com/yandex-ui/noscript-stub",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/yandex-ui/noscript-stub.git"
+    },
+    "dependencies": {
+        "noscript": "0.1.12"
+    },
+    "devDependencies": {
+        "grunt": "0.4.x",
+        "grunt-cli": "0.1.x",
+        "grunt-contrib-concat": "0.3.x",
+        "grunt-yate": "0.0.12",
+        "grunt-contrib-watch": "0.6.x",
+        "yate": "0.0.60"
+    },
+    "engines": {
+        "node": ">=0.8"
+    }
+}
+

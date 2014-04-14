@@ -1,0 +1,6 @@
+match .listTodo ns-view-content {
+    // ns-view-content-desc is required
+    <div class="ns-view-container-desc">
+        apply . ns-view-desc
+    </div>
+}
