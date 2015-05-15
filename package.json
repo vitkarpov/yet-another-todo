@@ -10,7 +10,7 @@
     "homepage": "https://github.com/vitkarpov/yet-another-todo",
     "repository": {
         "type": "git",
-        "url": "git://github.com/yandex-ui/noscript-stub.git"
+        "url": "git://github.com/vitkarpov/yet-another-todo.git"
     },
     "dependencies": {
         "noscript": "0.1.12"
