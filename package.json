@@ -2,7 +2,7 @@
     "author": {
         "name": "Viktor Karpov",
         "email": "viktor.s.karpov@yandex.ru",
-        "url": "https://github.com/doochik"
+        "url": "https://github.com/vitkarpov"
     },
     "name": "noscript-todo",
     "description": "Simple TODO List built with Noscript",
@@ -10,7 +10,7 @@
     "homepage": "https://github.com/vitkarpov/yet-another-todo",
     "repository": {
         "type": "git",
-        "url": "git://github.com/vitkarpov/yet-another-todo.git"
+        "url": "git://github.com/yandex-ui/noscript-stub.git"
     },
     "dependencies": {
         "noscript": "0.1.12"
