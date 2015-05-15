@@ -19,10 +19,10 @@
         "grunt": "0.4.x",
         "grunt-cli": "0.1.x",
         "grunt-contrib-concat": "0.3.x",
-        "grunt-yate": "0.0.12",
+        "grunt-yate": "git://github.com/vitkarpov/grunt-yate.git#node-v-0.12-fix",
         "grunt-contrib-watch": "0.6.x",
         "grunt-exec": "0.4.x",
-        "yate": "0.0.60"
+        "yate": "0.0.72"
     },
     "engines": {
         "node": ">=0.8"
