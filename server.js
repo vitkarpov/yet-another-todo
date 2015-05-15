@@ -8,7 +8,7 @@ var url = require('url');
 // for noscript todo-app:
 // 
 // * can serve static
-// * can handle models requests (/models/?_m=nameMolde)
+// * can handle models requests (/models/?_m=model)
 // ============
 
 /**
@@ -43,14 +43,17 @@ var controllers = {
         });
     },
     'do-todo': function(params) {
+        var id = Number(params.id);
+
         // update items
-        mock.todos.forEach(function(item) {
-            if (item.id === params.id) {
+        mock.todos = mock.todos.map(function(item) {
+            if (item.id === id) {
                 item.done = params.done;
             }
+            return item;
         });
         // add new item
-        if (params.id > mock.todos.length) {
+        if (id > mock.todos.length) {
             mock.todos.push(params);
         }
         return JSON.stringify({
@@ -71,10 +74,23 @@ var handlers = {
      * Handle static files
      */
     GET: function(request, response) {
-        response.writeHead(200);
-
         var url = request.url.replace(/^\//, '');
-        var streamPage = fs.createReadStream(path.resolve(process.cwd(), url || 'index.html'));
+        var pathName = path.resolve(process.cwd(), url || 'index.html');
+        var streamPage = fs.createReadStream(pathName);
+
+        var ext = /(.*)\.(.*)/.exec(pathName)[2];
+
+        if (ext === 'js') {
+            type = 'application/x-javascript; charset=utf-8';
+        }
+        if (ext === 'css') {
+            type = 'text/css; charset=utf-8';
+        }
+        if (ext === 'html') {
+            type = 'text/html; charset=utf-8';
+        }
+
+        response.writeHead(200, { 'Content-Type': type });
 
         streamPage.on('end', function() {
             response.end();
@@ -106,5 +122,4 @@ var handlers = {
 http.createServer(function(request, response) {
     handlers[request.method](request, response);
 }).listen(8000);
-
-fs.writeFile('.pid', process.pid);
+console.log('Server listening at 8000 port');

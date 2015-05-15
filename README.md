@@ -5,10 +5,10 @@ Simple TODO app build on top of the [Noscript](https://github.com/yandex-ui/nosc
 
 ## Getting start
 
-Clone the repo and run all tasks using main one:
+Clone the repo and build the project
 
 ```
-make all
+npm i && grunt
 ```
 
 It will take care of all the stuff:
@@ -17,7 +17,11 @@ It will take care of all the stuff:
 * run grunt tasks
 * run server
 
-To stop the server execute `make stop`
+To stop the server stop the current process with `CTRL+C`.
+
+## Development
+
+You can use `grunt watch` task.
 
 ## File structure
 

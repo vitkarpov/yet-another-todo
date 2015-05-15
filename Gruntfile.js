@@ -45,13 +45,18 @@ module.exports = function(grunt) {
                 'views/*/*.yate'
             ],
             tasks: ['concat', 'yate']
+        },
+        exec: {
+            server: {
+                command: "node server.js"
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-yate');
+    grunt.loadNpmTasks('grunt-exec');
 
-    grunt.registerTask('default', ['concat', 'yate', 'watch']);
-
+    grunt.registerTask('default', ['concat', 'yate', 'exec:server']);
 };

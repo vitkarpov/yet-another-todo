@@ -21,6 +21,7 @@
         "grunt-contrib-concat": "0.3.x",
         "grunt-yate": "0.0.12",
         "grunt-contrib-watch": "0.6.x",
+        "grunt-exec": "0.4.x",
         "yate": "0.0.60"
     },
     "engines": {
