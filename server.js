@@ -43,14 +43,13 @@ var controllers = {
         });
     },
     'do-todo': function(params) {
-        var id = Number(params.id);
+        var id = params.id;
 
         // update items
-        mock.todos = mock.todos.map(function(item) {
-            if (item.id === id) {
+        mock.todos.forEach(function(item) {
+            if (item.id == id) {
                 item.done = params.done;
             }
-            return item;
         });
         // add new item
         if (id > mock.todos.length) {
