@@ -13,7 +13,7 @@
         "url": "git://github.com/vitkarpov/yet-another-todo.git"
     },
     "dependencies": {
-        "noscript": "0.1.12"
+        "noscript": "0.7.0"
     },
     "devDependencies": {
         "grunt": "0.4.x",

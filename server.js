@@ -107,7 +107,7 @@ var handlers = {
         request.on('data', function(buffer) {
             buffer.toString().split('&').forEach(function(item) {
                 var parsed = item.split('.0=');
-                params[parsed[0]] = parsed[1];
+                params[parsed[0]] = decodeURIComponent(parsed[1]);
             });
         });
 

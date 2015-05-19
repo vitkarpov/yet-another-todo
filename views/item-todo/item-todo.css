@@ -1,12 +1,13 @@
 .b-todo
 {
-    margin: 6px 0;
+
 }
 
 .b-todo__title
 {
     position: relative;
-    padding-left: 21px
+    padding-left: 21px;
+    font-weight: normal;
 }
 
 .b-todo__check

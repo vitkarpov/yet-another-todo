@@ -6,6 +6,5 @@
 
 .b-app__content
 {
-    padding: 12px;
-    border: 1px dashed lightgray;
+    margin: 15px -15px;
 }

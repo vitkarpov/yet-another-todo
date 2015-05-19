@@ -6,6 +6,7 @@ ns.View.define('formAddItem', {
     },
     methods: {
         onhtmlinit: function() {
+            this.form = this.node.querySelector('.js-form');
             this.input = this.node.querySelector('.js-input-title');
             this.todos = ns.Model.get('listTodo');
             this._update = this.update.bind(this);
@@ -19,11 +20,12 @@ ns.View.define('formAddItem', {
 
             this._todo = ns.Model.get('todo', {id: this.todos.models.length + 1});
             this._todo.setData({
-                title: this.input.value || 'Yep!',
+                title: this.input.value,
                 done: 'false'
             });
 
             this.todos.insert(this._todo);
+            this.form.reset();
         },
         update: function() {
             if (this._todo) {
