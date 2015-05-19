@@ -5,12 +5,12 @@ match .todo ns-view-add-class {
 match .todo ns-view-content {
     <label class="b-todo__title">
         <input type="checkbox" class="b-todo__check js-check">
-            if /.models.todo.done == 'true' {
+            if model('todo').done == 'true' {
                 @checked = 'checked'
             }
         </input>
         <span class="b-todo__text">
-            /.models.todo.title
+            model('todo').title
         </span>
     </label>
 } 

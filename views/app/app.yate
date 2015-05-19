@@ -1,7 +1,13 @@
 match .app ns-view-content {
-    <h1 class="b-app__title">Yet Another TODO built with <a href="https://github.com/yandex-ui/noscript">noscript</a></h1>
-    <div class="b-app__content">
-        apply /.views.listTodo ns-view
-        apply /.views.formAddItem ns-view
+    <h1 class="b-app__title"><a href="https://github.com/yandex-ui/noscript">Noscript</a> TODO</h1>
+    <div class="b-app__content panel panel-default">
+        <div class="panel-body">
+            apply /.views.formAddItem ns-view
+        </div>
+    </div>
+    <div class="b-app__content panel panel-default">
+        <div class="panel-body">
+            apply /.views.listTodo ns-view
+        </div>
     </div>
 }
